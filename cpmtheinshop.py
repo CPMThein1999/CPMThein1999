@@ -1,8 +1,8 @@
 import requests
 
-__ENDPOINT_URL__: str = "https://cpmayan.squareweb.app/api"
+__ENDPOINT_URL__: str = "https://cpmtheinshop.squareweb.app/api"
 
-class CPMAyan:
+class CPMTheinShop:
     def __init__(self, access_key) -> None:
         self.auth_token = None
         self.access_key = access_key
