@@ -10,11 +10,10 @@ from rich.text import Text
 from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
+from cpmtheinshop import CPMTheinShop
 
-from cpmayan import CPMAyan
-
-__CHANNEL_USERNAME__ = "cp_ayan"
-__GROUP_USERNAME__   = "cp_ayan_chat"
+__CHANNEL_USERNAME__ = "cpmta11"
+__GROUP_USERNAME__   = "not available"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -39,7 +38,7 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name =  "Car Parking Multiplayer 1 Tool - @ayanhere09"
+    brand_name =  "Car Parking Multiplayer 1 Tool - @thein2242"
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
     ]
@@ -132,7 +131,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
         acc_access_key = prompt_valid_value("[bold][?] Access Key[/bold]", "Access Key", password=False)
         console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
-        cpm = CPMAyan(acc_access_key)
+        cpm = CPMTheinShop(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
