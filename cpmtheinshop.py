@@ -186,34 +186,31 @@ class CPMTheinShop:
         response_decoded = response.json()
         return response_decoded.get("ok")
     
-    def hack_car_speed(self, car_id):
-        payload = {
-            "account_auth": self.auth_token,
-            "car_id": car_id
-        }
+    def set_player_plates(self) -> bool:
+        payload = { "account_auth": self.auth_token }
         params = { "key": self.access_key }
-        response = requests.post(f"{__ENDPOINT_URL__}/hack_car_speed", params=params, data=payload)
+        response = requests.post(f"{__ENDPOINT_URL__}/set_plates", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
 
     def unlock_wheels(self) -> bool:
         payload = { "account_auth": self.auth_token }
         params = { "key": self.access_key }
-        response = requests.post(f"{BASE_URL}/unlock_wheels", params=params, data=payload)
+        response = requests.post(f"{__ENDPOINT_URL__}/unlock_wheels", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
 
     def unlock_equipments_male(self) -> bool:
         payload = { "account_auth": self.auth_token }
         params = { "key": self.access_key }
-        response = requests.post(f"{BASE_URL}/unlock_equipments_male", params=params, data=payload)
+        response = requests.post(f"{__ENDPOINT_URL__}/unlock_equipments_male", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
 
     def unlock_equipments_female(self) -> bool:
         payload = { "account_auth": self.auth_token }
         params = { "key": self.access_key }
-        response = requests.post(f"{BASE_URL}/unlock_equipments_female", params=params, data=payload)
+        response = requests.post(f"{__ENDPOINT_URL__}/unlock_equipments_female", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
 
@@ -226,3 +223,21 @@ class CPMTheinShop:
         response = requests.post(f"{__ENDPOINT_URL__}/hack_car_speed", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
+    
+    def unlock_animations(self) -> bool:
+        payload = { "account_auth": self.auth_token }
+        params = { "key": self.access_key }
+        response = requests.post(f"{__ENDPOINT_URL__}/unlock_animations", params=params, data=payload)
+        response_decoded = response.json()
+        return response_decoded.get("ok")
+
+    def max_max1(self, car_id, custom):
+        payload = {
+        "account_auth": self.auth_token,
+        "car_id": car_id,
+        "custom": custom,
+        }
+        params = {"key": self.access_key}
+        response = requests.post(f"{__ENDPOINT_URL__}/max_max1", params=params, data=payload)
+        response_decoded = response.json()
+        return response_decoded.get("ok")        
