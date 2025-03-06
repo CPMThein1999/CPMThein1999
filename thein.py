@@ -2,7 +2,7 @@ import requests
 
 __ENDPOINT_URL__: str = "https://thein.squareweb.app/api"
 
-class CPMAyan:
+class Thein:
     def __init__(self, access_key) -> None:
         self.auth_token = None
         self.access_key = access_key
