@@ -1,8 +1,8 @@
 import requests
 
-__ENDPOINT_URL__: str = "https://maroon-echidna-796942.squareweb.app/api"
+__ENDPOINT_URL__: str = "https://theincpm.squareweb.app/api"
 
-class Thein:
+class TheinCpm:
     def __init__(self, access_key) -> None:
         self.auth_token = None
         self.access_key = access_key
