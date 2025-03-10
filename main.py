@@ -10,7 +10,7 @@ from rich.text import Text
 from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
-from theincpm import TheinCpm
+from theincpm import TheinCPM
 
 __CHANNEL_USERNAME__ = "cpmta11"
 __GROUP_USERNAME__   = "not available"
