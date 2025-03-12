@@ -2,7 +2,7 @@ import requests
 
 __ENDPOINT_URL__: str = "https://theincpm.squareweb.app/api"
 
-class CPMAyan:
+class Ayandev:
     def __init__(self, access_key) -> None:
         self.auth_token = None
         self.access_key = access_key
