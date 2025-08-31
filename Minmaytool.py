@@ -51,7 +51,7 @@ def intro_animation():
 def show_banner(unlimited_status=None, current_coins=None, telegram_id=None):
     clear_screen()
     banner = [  
-              "
+              
 
               
                       "█▀▄▀█ █▀▄▀█ █░░",
